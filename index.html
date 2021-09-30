@@ -1,0 +1,389 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web//css/all.css">
+    
+    
+    <script src="popper.js"></script>
+   
+</head>
+<body><div id="box_8716840" class="portBox portBottom" style="box-shadow:0px 1px 15px 1px rgba(39, 39, 39, 0.08)" data-reload="reload_box_8716840">
+   
+    <div class="portBoxBodyStandart  scrollContent ">
+
+        
+            <div id="body_box_8716840" style="width:100%;">
+         <form name="search" id="search" action="index.cfm?fuseaction=contact.consumer_list" method="post" onsubmit="return _CF_checksearch(this)">
+        <input type="hidden" name="form_submitted" id="form_submitted" value="1">
+        
+    <class class="ui-form-list flex-list" id="box_search_contact_consumer_list" cellspacing="0">
+        
+        
+         
+            <div class="form-group">
+                <input name="kod_sirket" id="kod_sirket" type="text" maxlength="50" placeholder="Kod-şirket ">
+            </div>
+            <div class="form-group">
+                <input name="special_code" id="special_code" type="text" maxlength="50" size="5" placeholder="özel Kod ">
+            </div>
+            <div class="form-group">
+                <input name="unvan" id="unvan" type="text" maxlength="11" onkeyup="isNumber(this);" placeholder="Çalışan ünvan ">
+            </div>
+            <div class="form-group">
+                <select name="sirketler" id="sirketler">			
+                    <option value=""> şirketler </option>
+                    <option value="1" selected=""> Şirketler </option>
+                    
+                </select>	
+            </div>
+            <div class="form-group">
+                <select name="tumu" id="tumu">			
+                    <option value=""> Tümü </option>
+                    <option value="1" selected=""> Aktif </option>
+                    <option value="0"> Pasif </option>
+                </select>		
+            </div>
+            <div class="form-group small">
+                <input name="maxrows" id="maxrows" type="text" value="5" maxlength="3" onkeyup="isNumber(this);" style="width:25px;">
+            </div>
+            <div class="form-group">
+                
+                <a class="ui-btn ui-btn-green" href="javascript://" id="wrk_search_button" name="wrk_search_button" onclick="return ( PROCTest(this,0));"><i class="fa fa-search"></i></a>
+            </div>
+            <div class="form-group"><a id="ui-otherFileBtn" href="javascript://" class="ui-btn ui-btn-blue ui-btn-addon-right"> Daha Fazlası <i class="fa fa-angle-down"></i></a></div>
+            <div class="form-group"><a id="ui-plus" href="javascript://" class="ui-btn ui-btn-gray"><i class="fa fa-plus"></i></a></div>
+        </class>
+<div style="display: block;" id="box_search_contact_consumer_list_search_div" class="ui-otherFile">
+        <div class="ui-otherFileTitle">
+            <h2> Filtre Seçenekleri </h2>
+        </div>
+        <div class="ui-form-list ui-form-block">
+            
+                <div class="row" type="row">
+
+            <div class="col col-2 col-md-3 col-sm-6 col-xs-12" type="column" index="1" sort="true">
+                
+                <div class="form-group" id="item-record_name">
+                    <label class="col col-12"> Kaydeden </label>
+                    <div class="col col-12">
+                        <div class="input-group" >
+                            <input type="hidden" name="kayit"  id="kayit" value="">
+                            <input type="text" name="kayit" id="kayit" value="" style="width:100px;" onfocus="AutoComplete_Create('record_name','MEMBER_NAME','MEMBER_NAME','get_member_autocomplete','3','EMPLOYEE_ID','record_emp','','3','125');" autocomplete="off">    
+                            <span class="input-group-addon icon-ellipsis btnPointer"  onclick="windowopen()"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="item-pos_code_text">
+                    <label class="col col-12"> Temsilci </label>
+                    <div class="col col-12">
+                        <div class="input-group">
+                        <input type="hidden" name="temsilci" id="temsilci" value="">
+                        <input name="temsilci" type="text" id="temsilci" style="width:100px;" value="" autocomplete="off"><div id="pos_code_text_div_2" name="pos_code_text_div_2" class="completeListbox" autocomplete="on" style="width: 404px; max-height: 150px; overflow: auto; position: absolute; left: 443.8px; top: 140.6px; z-index: 159; display: none;"></div>
+                        <span class="input-group-addon icon-ellipsis brnPointer"  onclick="windowopen()"></span>
+                        </div>			
+                    </div>
+                </div>
+                    <div class="form-group" id="item-customer_value">
+                        <label class="col col-12"> Müşteri Değeri </label>
+                        <div class="col col-12">
+                            <select name="customer_value" id="customer_value">
+                                <option value=""> Seçiniz </option>
+                                
+                                    <option value="2">müşteri1</option>
+                                
+                                    <option value="1">müşteri2</option>
+                                
+                                
+                            </select>
+                        </div>
+                    </div>	
+                    <div class="form-group" id="item-sales_county">
+                        <label class="col col-12"> Satış Bölgesi </label>
+                        <div class="col col-12">
+                            
+    <select id="sales_county" name="sales_county" style="width:150px;height:px">
+    <option value="">Seçiniz </option>
+    
+        <option value="1">bölge1</option> 
+    
+        <option value="2">bölge2</option> 
+    
+    
+    </select>
+    
+                        </div>
+                    </div>
+            </div>
+                    <div class="col col-2 col-md-3 col-sm-6 col-xs-12" type="column" index="5" sort="true">
+                
+                        <div class="form-group" id="item-country_id">
+                            <label class="col col-12"> Ülke </label>
+                            <div class="col col-12">
+                                <select name="country_id" id="country_id" style="width:100px;" onchange="LoadCity(this.value,'city_id','county_id',0);">
+                                    <option value=""> Seçiniz </option>
+                                    
+                                        <option value="1">ABD</option>
+                                        <option value="2">Türkiye</option>
+                                    
+                                </select>					
+                            </div>
+                        </div>    
+                        <div class="form-group" id="item-city_id">
+                            <label class="col col-12"> Şehir </label>
+                            <div class="col col-12">
+                                <select name="city_id" id="city_id" >
+                                    <option value=""> Seçiniz </option>
+                                    <option value="1"> il1 </option>
+                                    <option value="2"> il2 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="item-county_id">
+                            <label class="col col-12"> İlçe </label>
+                            <div class="col col-12">
+                                <select name="county_id" id="county_id">
+                                    <option value=""> Seçiniz </option>
+                                    <option value="1"> ilçe1 </option>
+                                    <option value="2"> ilçe2 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="item-get_consumer_stage">
+                            <label class="col col-12"> Aşama </label>
+                            <div class="col col-12">
+                                <select name="process_stage_type" id="process_stage_type">
+                                    <option value="" selected=""> Seçiniz </option>
+                                    
+                                        <option value="8">Kayıt</option>
+                                    
+                                        <option value="843">Kayıt</option>
+                                    
+                                    
+                                </select>
+                            </div>
+                        </div>	
+                    </div>		
+                    <div class="col col-2 col-md-3 col-sm-6 col-xs-12" type="column" index="3" sort="true">
+                        <div class="form-group" id="sektor">
+                            <label class="col col-12"> Sektör </label>
+                            <div class="col col-12">
+                                <select name="sektor" id="sektor" style="width:100px;">
+                                    <option value="" selected=""> Sektör Seçiniz </option>
+                                    <option value="1"> Özel </option>
+                                    <option value="0"> Devlet </option>			
+                                </select>
+                            </div>
+                        </div>
+                        
+                            <div class="form-group" id="item-search_potential">
+                                <label class="col col-12"> Cari Tipi </label>
+                                <div class="col col-12">
+                                    <select name="c.t" id="c.t" style="width:100px;">
+                                        <option value="" selected=""> Seçiniz </option>
+                                        <option value="1"> cari1 </option>
+                                        <option value="0"> Cari2 </option>			
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group" id="item-use_efatura">
+                                <label class="col col-12"> E-Fatura </label>
+                                <div class="col col-12">
+                                    <select name="use_efatura" id="use_efatura">
+                                        <option value=""> Seçiniz </option>
+                                        <option value="1"> fatura1 </option>
+                                        <option value="0"> fatura2 </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col col-12"> TC. No </label>
+                                <input name="tc_identy" id="tc_identy" type="text" maxlength="11" onkeyup="isNumber(this);">
+                            </div>
+                    </div>
+                    <div class="col col-2 col-md-3 col-sm-6 col-xs-12" type="column" index="4" sort="true">
+                        <div class="form-group" id="item-cons_cat">
+                            <label class="col col-12"> Üye Tipi </label>
+                            <div class="col col-12">
+                                
+        <select id="cons_cat" name="cons_cat" style="width:110px;height:px">
+        
+            <option value="">Seçiniz </option>
+            <option value="1"> üye1 </option>
+            <option value="2"> üye2 </option>
+        
+           
+        </select>
+        
+                            </div>
+                        </div>
+                        <div class="form-group" id="item-cons_cat">
+                            <label class="col col-12"> Kategoriler </label>
+                            <div class="col col-12">
+                                
+        <select id="category" name="category" style="width:110px;height:px">
+        
+            <option value="">Tüm Kategoriler </option>
+            <option value="1"> Kategori1 </option>
+            <option value="2"> Kategori2 </option>
+        
+           
+        </select>
+        
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col col-12"> Vergi No </label>
+                            <input name="v.n" id="v.n" type="text" maxlength="11" onkeyup="isNumber(this);">
+                        </div>               
+                    
+
+                <div class="form-group" id="item-period_id">
+                    <label class="col col-12"> Dönem </label>
+                    <div class="col col-12">
+                        <select name="period_id" id="period_id">
+                            <option value=""> Seçiniz </option>
+                            
+                                <option value="1"> Dönem1</option>
+                                
+                                    <option value="2"> Dönem2</option>
+                                
+                        </select>
+                    </div>
+                </div> 
+            
+                <div class="form-group" id="item-blacklist_status">
+                    <label class="col col-12">Kara liste üyeleri</label>
+                    <label class="col col-12">
+                        Kara Liste Üyeleri <input type="checkbox" name="blacklist_status" id="blacklist_status" value="1">
+                    </label>
+                </div>
+            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="ui-form-list-btn">
+            
+<div>
+    <a class="ui-btn ui-btn-success" href="javascript://"  onclick="return "> Ara </a>
+    <input searchbutton="" type="submit" class="searchbuton" hidden="true"  value="" onclick="return ">
+</div>
+</div>
+
+
+    <div class="boxRow uniqueBox " >
+        
+            <div  class="portBox portBottom" style="box-shadow:0px 1px 15px 1px rgba(39, 39, 39, 0.08)" data-reload="reload_box_1039240">
+               
+                <div id="header_box_1039240" class="portHeadLight" stil="">	
+                    <div class="portHeadLightTitle">
+                        <span id="handle_box_1039240"><a>Kurumsal Hesaplar </a></span> 
+                    </div>
+                   <li><a ><i class="fas fa-eye" style="color: rgb(243, 13, 13);"></i></a></li>
+                    <li><a><i class="fas fa-arrow-down" style="color: rgb(243, 13, 13);"></i></i></a></li>
+                     <li><a><i class="fas fa-expand-alt" style="color: rgb(243, 13, 13);"></i></a></li>
+                </div> 
+                
+                <div class="portBoxBodyStandart  scrollContent ">
+        
+                    
+                        <div id="body_box_1039240" style="width:100%">
+                     
+                <div class="ui-scroll">
+                       <table id="form_list_5387983" class="ui-table-list ui-form tablesorter tablesorter-default tablesorter7eb8d285a0115" sort="true" role="grid">
+            
+                    <thead>
+                        <tr role="row" class="tablesorter-headerRow"> 
+                            
+                            <th style="width: 30px; user-select: none;" data-column="0" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"id="th_0"><div class="tablesorter-header-inner"> Sıra </div></th>
+                            <th data-column="1" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"  id="th_1" style="user-select: none;"><div class="tablesorter-header-inner"> üye No </div></th>
+                            
+                                <th data-column="2" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"  id="th_2" style="user-select: none;"><div class="tablesorter-header-inner"> özel kod </div></th>
+                            
+                                <th data-column="3" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_3" style="user-select: none;"><div class="tablesorter-header-inner"> Şirket </div></th>
+                                <th data-column="4" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"  id="th_4" style="user-select: none;"><div class="tablesorter-header-inner"> Kategori </div></th>
+                            
+                                <th data-column="5" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"  id="th_5" style="user-select: none;"><div class="tablesorter-header-inner"> Yönetici </div></th>
+                            
+                                <th data-column="6" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_6" style="user-select: none;"><div class="tablesorter-header-inner"> Şehir </div></th>
+                            
+                                <th data-column="7" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_7" style="user-select: none;"><div class="tablesorter-header-inner"> İlçe </div></th>
+                            
+                                <th data-column="8" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader"id="th_8" style="user-select: none;"><div class="tablesorter-header-inner"> Semt </div></th>
+                            
+                                <th data-column="9" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_9" style="user-select: none;"><div class="tablesorter-header-inner"> Temsilci </div></th>
+                            
+                                <th data-column="10" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_10" style="user-select: none;"><div class="tablesorter-header-inner"> Potansiyel 
+                            
+                                </div></th>
+                            
+                            <th data-column="11" class="tablesorter-header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" id="th_11" style="user-select: none;"><div class="tablesorter-header-inner"> Bakiye </div></th>
+                
+<th class="header_icn_none tablesorter-header tablesorter-headerUnSorted" width="20" data-column="12" tabindex="0" scope="col" role="columnheader" id="th_12" style="user-select: none;"><div class="tablesorter-header-inner"><i class="fa fa-plus" title=" Ekle "></i></div></th>
+                        </tr>
+                    </thead>
+                    <tbody aria-live="polite" aria-relevant="all">
+                        
+                            <tr role="row">
+                               
+                                
+                                    <td colspan="1"> 1</td>
+                                    <td colspan="1" style="width: 30px; user-select: none;">C102</td>
+                                    <td colspan="1" style="width: 90px; user-select: none;"> </td>
+                                    <td colspan="1" style="width: 150px; user-select: none; color: darkcyan;">1. vaka şirketi </td>
+                                    <td colspan="1" style="width: 150px; user-select: none;">Kurumsal müşteri </td>
+                                    <td colspan="1" style="width: 170px; user-select: none; color: darkcyan;">1.vaka şirketi 1.vaka şirketi </td>
+                                    <td colspan="1" style="width: 150px; user-select: none;">İstanbul </td>
+                                    <td colspan="1" style="width: 90px; user-select: none;">Kadıköy </td>
+                                    <td colspan="1" style="width: 100px; user-select: none;"> </td>
+                                    <td colspan="1" style="width: 150px; user-select: none;"> Tanımlı değil </td>
+                                    <td colspan="1" style="width: 150px; user-select: none;"> cari </td>
+                                    <td colspan="1" style="width: 220px; user-select: none;"> 15.000.00TL(A) </td>
+                                    <td colspan="1" ><i class="fas fa-pen"></i> </td>
+                            </tr>
+                            <tr role="row">
+                                
+                                <td colspan="1">2</td>
+                                <td colspan="1" style="width: 30px; user-select: none;">C89</td>
+                                <td colspan="1" style="width: 90px; user-select: none;"> </td>
+                                <td colspan="1" style="width: 150px; user-select: none; color: darkcyan;">ACE Company </td>
+                                <td colspan="1" style="width: 150px; user-select: none;">Kurumsal müşteri </td>
+                                <td colspan="1" style="width: 170px; user-select: none; color: darkcyan;">Hülya Sönmez </td>
+                                <td colspan="1" style="width: 150px; user-select: none;">İstanbul </td>
+                                <td colspan="1" style="width: 90px; user-select: none;"> Kadıköy</td>
+                                <td colspan="1" style="width: 100px; user-select: none;"> </td>
+                                <td colspan="1" style="width: 150px; user-select: none;"> Tanımlı değil </td>
+                                <td colspan="1" style="width: 150px; user-select: none;"> cari </td>
+                                <td colspan="1" style="width: 220px; user-select: none;"> 252.066.40TL(A) </td>
+                                <td colspan="1" ><i class="fas fa-pen"></i> </td>
+                        </tr>
+                        <tr role="row">
+                                
+                            <td colspan="1">3</td>
+                            <td colspan="1" style="width: 30px; user-select: none;">C100</td>
+                            <td colspan="1" style="width: 90px; user-select: none;"> </td>
+                            <td colspan="1" style="width: 150px; user-select: none; color: darkcyan;">AKCANLAR </td>
+                            <td colspan="1" style="width: 150px; user-select: none;">Küçük işletmeler </td>
+                            <td colspan="1" style="width: 170px; user-select: none; color: darkcyan;">Ada Akcan </td>
+                            <td colspan="1" style="width: 150px; user-select: none;">İstanbul </td>
+                            <td colspan="1" style="width: 90px; user-select: none;">Şişli </td>
+                            <td colspan="1" style="width: 100px; user-select: none;"> </td>
+                            <td colspan="1" style="width: 150px; user-select: none;"> Tanımlı değil </td>
+                            <td colspan="1" style="width: 150px; user-select: none;"> cari </td>
+                            <td colspan="1" style="width: 220px; user-select: none;"> 224.20TL(B) </td>
+                            <td colspan="1" ><i class="fas fa-pen"></i> </td>
+                            
+                    </tr>
+                
+                        
+                    </tbody>
+                
+                       </table>
+                    </div></div></div></div></div></div></form></div></div></div>
+
+        </body></html>
+
+        
